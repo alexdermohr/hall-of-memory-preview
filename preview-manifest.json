@@ -2,13 +2,13 @@
   "schema_version": 1,
   "kind": "hall-of-memory-static-preview-publication",
   "source_project": "hall-of-memory",
-  "source_task": "T038",
-  "source_commit": "829417f6b294c01af65597aea7629bd09e71aa17",
-  "source_route": "/demo/rahmen/",
+  "source_task": "T039",
+  "source_commit": "ac030d5a7ba0deb56c66aaadd5f05ad982d33c6a",
+  "source_route": "/demo/",
   "github_pages_base": "/hall-of-memory-preview/",
   "indexing_policy": "noindex,nofollow",
   "content_scope": "generated static dist only; no source, tasks, backend, credentials or node_modules",
-  "published_tree_sha256": "36f9eee839f7b507618157c8d022f10c16ad01e641ca8531538ac62e38aeab6c",
+  "published_tree_sha256": "de7acde0ae305e8f209e39d3d44d2f66e15510101dcacee1109350fab8353ec0",
   "published_tree_hash_method": "sha256(concat(sorted(path + NUL + final-published-file-bytes)))",
   "generated_file_count": 32,
   "bad_root_refs": 0,
@@ -47,5 +47,21 @@
   ],
   "metal_profile_strength": "V1 strongest; V2 strong; V3-V5 restrained",
   "v3_v5_depth_profile": "same-upper-left-relief-model-restrained",
-  "v6_profile_mode": "direct-floral-source-no-linear-bevel-stack"
+  "v6_profile_mode": "direct-floral-source-no-linear-bevel-stack",
+  "header_logo_desktop_css_px": [
+    72,
+    84
+  ],
+  "header_logo_tablet_css_px": [
+    54,
+    63
+  ],
+  "header_logo_compact_css_px": [
+    46,
+    54
+  ],
+  "header_min_height_desktop_px": 112,
+  "header_min_height_tablet_px": 88,
+  "header_logo_claim_desktop": "visible-secondary",
+  "header_logo_claim_tablet": "hidden"
 }
