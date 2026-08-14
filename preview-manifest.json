@@ -3,10 +3,13 @@
   "kind": "hall-of-memory-static-preview-publication",
   "source_project": "hall-of-memory",
   "source_task": "T038",
-  "source_commit": "63c13e98249878a9e8e55ea7a5ef441ec8ce318d",
+  "source_commit": "d8746c043b4d6c62957ff5dd48b65c4b8a3c4d7d",
   "source_route": "/demo/rahmen/",
   "github_pages_base": "/hall-of-memory-preview/",
   "indexing_policy": "noindex,nofollow",
   "content_scope": "generated static dist only; no source, tasks, backend, credentials or node_modules",
-  "published_tree_sha256": "acfa3f4ce28026b7f277ba567645397fc3588226ce3d390aa7cf4e74305ce296"
+  "published_tree_sha256": "4db11ea664cd3cd8ae4c5ba70a086b5a3f9a37e1b23bd7be8078a6e9f04d494f",
+  "event_photo_source_sha256": "8d70b3d40303742bd658c64a49485821efd530d2a0b86d4a931fa27635a4e775",
+  "event_photo_webp_sha256": "528fbcd86c497faf759ac54316b360931ed2e2569c1a143ceac8629021a58e23",
+  "floral_master_sha256": "f45aa92aa1c4e53e2efbca17fcbca79b606e3b5c67bf9bf4c97def70b5b7f99d"
 }
