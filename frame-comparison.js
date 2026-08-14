@@ -1,64 +1,46 @@
 (() => {
-  const shellToggles = Array.from(document.querySelectorAll('[data-frame-shell-toggle]'));
-  const modeButtons = Array.from(document.querySelectorAll('[data-frame-mode]'));
-  if (shellToggles.length === 0 && modeButtons.length === 0) return;
+  const sliders = Array.from(document.querySelectorAll('[data-frame-size]'));
+  const consumers = Array.from(document.querySelectorAll('[data-frame-consumer]'));
+  if (sliders.length === 0 || consumers.length === 0) return;
 
-  const variantLinks = Array.from(document.querySelectorAll('[data-frame-variant-link]'));
-  let shellOn = false;
-  let imageMode = 'inner';
-
-  const syncVariantLinks = () => {
-    for (const link of variantLinks) {
-      const href = link.getAttribute('href');
-      if (!href) continue;
-      const url = new URL(href, window.location.href);
-      if (shellOn) url.searchParams.set('kasten', 'an');
-      else url.searchParams.delete('kasten');
-      if (imageMode === 'full') url.searchParams.set('bild', 'full');
-      else url.searchParams.delete('bild');
-      link.setAttribute('href', `${url.pathname}${url.search}${url.hash}`);
-    }
-  };
+  const clamp = (value) => Math.max(0, Math.min(100, value));
+  const params = new URL(window.location.href).searchParams;
+  const explicitSize = Number.parseFloat(params.get('bildgroesse') ?? '');
+  const legacySize = params.get('bild') === 'full' ? 100 : params.get('bild') === 'inner' ? 0 : Number.NaN;
+  let imageSize = Number.isFinite(explicitSize) ? clamp(explicitSize) : Number.isFinite(legacySize) ? legacySize : 50;
 
   const syncUrl = () => {
     const url = new URL(window.location.href);
-    if (shellOn) url.searchParams.set('kasten', 'an');
-    else url.searchParams.delete('kasten');
-    if (imageMode === 'full') url.searchParams.set('bild', 'full');
-    else url.searchParams.delete('bild');
+    url.searchParams.delete('bild');
+    url.searchParams.delete('kasten');
+    if (imageSize === 50) url.searchParams.delete('bildgroesse');
+    else url.searchParams.set('bildgroesse', String(Math.round(imageSize)));
     window.history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
   };
 
   const render = (writeUrl = false) => {
-    document.body.dataset.demoFrameShell = shellOn ? 'on' : 'off';
-    document.body.dataset.demoFrameImageMode = imageMode;
-    for (const toggle of shellToggles) {
-      toggle.setAttribute('aria-pressed', String(shellOn));
-      toggle.setAttribute('aria-label', shellOn ? 'Zusatzkasten ausblenden' : 'Zusatzkasten einblenden');
-      const label = toggle.querySelector('[data-frame-shell-label]');
-      const text = shellOn ? 'Zusatzkasten: an' : 'Zusatzkasten: aus';
-      if (label) label.textContent = text;
-      else toggle.textContent = text;
+    for (const slider of sliders) slider.value = String(imageSize);
+    for (const consumer of consumers) {
+      const inner = Number.parseFloat(consumer.dataset.frameInsetInner ?? '');
+      const outer = Number.parseFloat(consumer.dataset.frameInsetOuter ?? '');
+      if (!Number.isFinite(inner) || !Number.isFinite(outer)) continue;
+      const inset = inner + (outer - inner) * (imageSize / 100);
+      const size = 100 - inset * 2;
+      consumer.style.setProperty('--demo-photo-inset', `${inset.toFixed(3)}%`);
+      consumer.style.setProperty('--demo-photo-size', `${size.toFixed(3)}%`);
+      consumer.dataset.frameSize = String(Math.round(imageSize));
     }
-    for (const button of modeButtons) {
-      button.setAttribute('aria-pressed', String(button.dataset.frameMode === imageMode));
-    }
-    syncVariantLinks();
     if (writeUrl) syncUrl();
   };
 
-  const params = new URL(window.location.href).searchParams;
-  shellOn = params.get('kasten') === 'an';
-  imageMode = params.get('bild') === 'full' ? 'full' : 'inner';
   render(false);
+  if (params.has('bild') || params.has('kasten')) syncUrl();
 
-  for (const toggle of shellToggles) {
-    toggle.addEventListener('click', () => { shellOn = !shellOn; render(true); });
-  }
-  for (const button of modeButtons) {
-    button.addEventListener('click', () => {
-      imageMode = button.dataset.frameMode === 'full' ? 'full' : 'inner';
-      render(true);
+  for (const slider of sliders) {
+    slider.addEventListener('input', () => {
+      imageSize = clamp(Number.parseFloat(slider.value));
+      render(false);
     });
+    slider.addEventListener('change', () => render(true));
   }
 })();

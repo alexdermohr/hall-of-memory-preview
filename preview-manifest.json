@@ -3,22 +3,24 @@
   "kind": "hall-of-memory-static-preview-publication",
   "source_project": "hall-of-memory",
   "source_task": "T038",
-  "source_commit": "ce995d096f635f295b77c3e976217de52a880fbd",
+  "source_commit": "f8ac00c787c9f8595accc00727545aaf768a302c",
   "source_route": "/demo/rahmen/",
   "github_pages_base": "/hall-of-memory-preview/",
   "indexing_policy": "noindex,nofollow",
   "content_scope": "generated static dist only; no source, tasks, backend, credentials or node_modules",
-  "published_tree_sha256": "793168b959bcd81ec04de857f574552ba3b7fce4cdd0d0c5a60be0985a6ea25c",
+  "published_tree_sha256": "b996fed3e6ab1452782bc3812d4c26e3336520c6bd20456911b4ef2925dea5f8",
   "event_photo_source_sha256": "8d70b3d40303742bd658c64a49485821efd530d2a0b86d4a931fa27635a4e775",
   "event_photo_webp_sha256": "528fbcd86c497faf759ac54316b360931ed2e2569c1a143ceac8629021a58e23",
   "floral_master_sha256": "f45aa92aa1c4e53e2efbca17fcbca79b606e3b5c67bf9bf4c97def70b5b7f99d",
-  "consumer_modes": [
-    "inner-line",
-    "full-bleed"
-  ],
-  "outer_shell_default": "off",
   "overview_sample_photo": false,
   "overview_controls": false,
   "detail_sample_photo": true,
-  "detail_controls": true
+  "detail_image_size_control": "continuous-slider",
+  "detail_image_size_range": [
+    0,
+    100
+  ],
+  "detail_image_size_default": 50,
+  "detail_image_outer_semantics": "outer-decorative-line",
+  "detail_shell_control": false
 }
