@@ -1,54 +1,64 @@
 (() => {
-  const toggles = Array.from(document.querySelectorAll('[data-frame-shell-toggle]'));
-  if (toggles.length === 0) return;
+  const shellToggles = Array.from(document.querySelectorAll('[data-frame-shell-toggle]'));
+  const modeButtons = Array.from(document.querySelectorAll('[data-frame-mode]'));
+  if (shellToggles.length === 0 && modeButtons.length === 0) return;
 
   const variantLinks = Array.from(document.querySelectorAll('[data-frame-variant-link]'));
-  const shellTargets = Array.from(document.querySelectorAll('.demo-hero-image-wrap, .frame-comparison-preview'));
+  let shellOn = false;
+  let imageMode = 'inner';
 
-  const syncVariantLinks = (shellOff) => {
+  const syncVariantLinks = () => {
     for (const link of variantLinks) {
       const href = link.getAttribute('href');
       if (!href) continue;
       const url = new URL(href, window.location.href);
-      if (shellOff) url.searchParams.set('kasten', 'aus');
+      if (shellOn) url.searchParams.set('kasten', 'an');
       else url.searchParams.delete('kasten');
+      if (imageMode === 'full') url.searchParams.set('bild', 'full');
+      else url.searchParams.delete('bild');
       link.setAttribute('href', `${url.pathname}${url.search}${url.hash}`);
     }
   };
 
-  const apply = (shellOff, syncUrl) => {
-    document.body.dataset.demoFrameShell = shellOff ? 'off' : 'on';
-
-    for (const target of shellTargets) {
-      target.style.borderColor = shellOff ? 'transparent' : '';
-      target.style.boxShadow = shellOff ? 'none' : '';
-    }
-
-    for (const toggle of toggles) {
-      toggle.setAttribute('aria-pressed', String(shellOff));
-      toggle.dataset.frameShellState = shellOff ? 'off' : 'on';
-      toggle.setAttribute('aria-label', shellOff ? 'Außenkasten einblenden' : 'Außenkasten ausblenden');
-      const label = toggle.querySelector('[data-frame-shell-label]');
-      if (label) label.textContent = shellOff ? 'Außenkasten: aus' : 'Außenkasten: an';
-      else toggle.textContent = shellOff ? 'Außenkasten: aus' : 'Außenkasten: an';
-    }
-
-    syncVariantLinks(shellOff);
-
-    if (syncUrl) {
-      const url = new URL(window.location.href);
-      if (shellOff) url.searchParams.set('kasten', 'aus');
-      else url.searchParams.delete('kasten');
-      window.history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
-    }
+  const syncUrl = () => {
+    const url = new URL(window.location.href);
+    if (shellOn) url.searchParams.set('kasten', 'an');
+    else url.searchParams.delete('kasten');
+    if (imageMode === 'full') url.searchParams.set('bild', 'full');
+    else url.searchParams.delete('bild');
+    window.history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
   };
 
-  const initialShellOff = new URL(window.location.href).searchParams.get('kasten') === 'aus';
-  apply(initialShellOff, false);
+  const render = (writeUrl = false) => {
+    document.body.dataset.demoFrameShell = shellOn ? 'on' : 'off';
+    document.body.dataset.demoFrameImageMode = imageMode;
+    for (const toggle of shellToggles) {
+      toggle.setAttribute('aria-pressed', String(shellOn));
+      toggle.setAttribute('aria-label', shellOn ? 'Zusatzkasten ausblenden' : 'Zusatzkasten einblenden');
+      const label = toggle.querySelector('[data-frame-shell-label]');
+      const text = shellOn ? 'Zusatzkasten: an' : 'Zusatzkasten: aus';
+      if (label) label.textContent = text;
+      else toggle.textContent = text;
+    }
+    for (const button of modeButtons) {
+      button.setAttribute('aria-pressed', String(button.dataset.frameMode === imageMode));
+    }
+    syncVariantLinks();
+    if (writeUrl) syncUrl();
+  };
 
-  for (const toggle of toggles) {
-    toggle.addEventListener('click', () => {
-      apply(document.body.dataset.demoFrameShell !== 'off', true);
+  const params = new URL(window.location.href).searchParams;
+  shellOn = params.get('kasten') === 'an';
+  imageMode = params.get('bild') === 'full' ? 'full' : 'inner';
+  render(false);
+
+  for (const toggle of shellToggles) {
+    toggle.addEventListener('click', () => { shellOn = !shellOn; render(true); });
+  }
+  for (const button of modeButtons) {
+    button.addEventListener('click', () => {
+      imageMode = button.dataset.frameMode === 'full' ? 'full' : 'inner';
+      render(true);
     });
   }
 })();
