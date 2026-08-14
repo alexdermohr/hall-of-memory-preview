@@ -3,14 +3,14 @@
   "kind": "hall-of-memory-static-preview-publication",
   "source_project": "hall-of-memory",
   "source_task": "T038",
-  "source_commit": "a8ee19f01e03e09f214712c2781c271eb17fe073",
+  "source_commit": "829417f6b294c01af65597aea7629bd09e71aa17",
   "source_route": "/demo/rahmen/",
   "github_pages_base": "/hall-of-memory-preview/",
   "indexing_policy": "noindex,nofollow",
   "content_scope": "generated static dist only; no source, tasks, backend, credentials or node_modules",
-  "published_tree_sha256": "cdb04e72d986f972842e8d63756e1b2b8af52ae0facbe69007a6f26abed37b95",
-  "published_tree_hash_method": "sha256(canonical-json([{path,sha256}], sorted by path))",
-  "generated_file_count": 31,
+  "published_tree_sha256": "36f9eee839f7b507618157c8d022f10c16ad01e641ca8531538ac62e38aeab6c",
+  "published_tree_hash_method": "sha256(concat(sorted(path + NUL + final-published-file-bytes)))",
+  "generated_file_count": 32,
   "bad_root_refs": 0,
   "event_photo_source_sha256": "8d70b3d40303742bd658c64a49485821efd530d2a0b86d4a931fa27635a4e775",
   "event_photo_webp_sha256": "528fbcd86c497faf759ac54316b360931ed2e2569c1a143ceac8629021a58e23",
@@ -29,6 +29,23 @@
   "detail_image_size_default": 50,
   "detail_image_outer_semantics": "outer-decorative-line",
   "detail_shell_control": false,
-  "v1_v2_depth_profile": "static-material-bevel-inner-groove-contact-shadow-subtle-reflection",
-  "motion_depth_effects": false
+  "v1_v2_depth_profile": "static-convex-multi-mask-bevel-inner-groove-contact-shadow",
+  "motion_depth_effects": false,
+  "metal_profile_variants": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "metal_profile_light_source": "upper-left",
+  "metal_profile_layers": [
+    "contact-shadow",
+    "counter-edge",
+    "highlight-edge",
+    "warm-gold-body"
+  ],
+  "metal_profile_strength": "V1 strongest; V2 strong; V3-V5 restrained",
+  "v3_v5_depth_profile": "same-upper-left-relief-model-restrained",
+  "v6_profile_mode": "direct-floral-source-no-linear-bevel-stack"
 }
