@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "kind": "hall-of-memory-static-preview-publication",
+  "source_project": "hall-of-memory",
+  "source_task": "T038",
+  "source_commit": "63c13e98249878a9e8e55ea7a5ef441ec8ce318d",
+  "source_route": "/demo/rahmen/",
+  "github_pages_base": "/hall-of-memory-preview/",
+  "indexing_policy": "noindex,nofollow",
+  "content_scope": "generated static dist only; no source, tasks, backend, credentials or node_modules",
+  "published_tree_sha256": "acfa3f4ce28026b7f277ba567645397fc3588226ce3d390aa7cf4e74305ce296"
+}
