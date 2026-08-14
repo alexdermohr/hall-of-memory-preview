@@ -2,15 +2,15 @@
   "schema_version": 1,
   "kind": "hall-of-memory-static-preview-publication",
   "source_project": "hall-of-memory",
-  "source_task": "T039",
-  "source_commit": "ac030d5a7ba0deb56c66aaadd5f05ad982d33c6a",
+  "source_task": "T038",
+  "source_commit": "ceea9f86b9917062bbc70dc2b5d8fc5d1b85be62",
   "source_route": "/demo/",
   "github_pages_base": "/hall-of-memory-preview/",
   "indexing_policy": "noindex,nofollow",
   "content_scope": "generated static dist only; no source, tasks, backend, credentials or node_modules",
-  "published_tree_sha256": "de7acde0ae305e8f209e39d3d44d2f66e15510101dcacee1109350fab8353ec0",
+  "published_tree_sha256": "27a72af3c3f7529c767a5c91c35b7cb1a1c0417248b87e6b0584ee96f1001f2b",
   "published_tree_hash_method": "sha256(concat(sorted(path + NUL + final-published-file-bytes)))",
-  "generated_file_count": 32,
+  "generated_file_count": 30,
   "bad_root_refs": 0,
   "event_photo_source_sha256": "8d70b3d40303742bd658c64a49485821efd530d2a0b86d4a931fa27635a4e775",
   "event_photo_webp_sha256": "528fbcd86c497faf759ac54316b360931ed2e2569c1a143ceac8629021a58e23",
@@ -29,25 +29,7 @@
   "detail_image_size_default": 50,
   "detail_image_outer_semantics": "outer-decorative-line",
   "detail_shell_control": false,
-  "v1_v2_depth_profile": "static-convex-multi-mask-bevel-inner-groove-contact-shadow",
   "motion_depth_effects": false,
-  "metal_profile_variants": [
-    1,
-    2,
-    3,
-    4,
-    5
-  ],
-  "metal_profile_light_source": "upper-left",
-  "metal_profile_layers": [
-    "contact-shadow",
-    "counter-edge",
-    "highlight-edge",
-    "warm-gold-body"
-  ],
-  "metal_profile_strength": "V1 strongest; V2 strong; V3-V5 restrained",
-  "v3_v5_depth_profile": "same-upper-left-relief-model-restrained",
-  "v6_profile_mode": "direct-floral-source-no-linear-bevel-stack",
   "header_logo_desktop_css_px": [
     72,
     84
@@ -63,5 +45,19 @@
   "header_min_height_desktop_px": 112,
   "header_min_height_tablet_px": 88,
   "header_logo_claim_desktop": "visible-secondary",
-  "header_logo_claim_tablet": "hidden"
+  "header_logo_claim_tablet": "hidden",
+  "frame_variants": {
+    "1": "hall-of-memory-frame-01.png",
+    "2": "hall-of-memory-frame-02.png",
+    "3": "hall-of-memory-frame-03.png",
+    "4": "hall-of-memory-frame-04.png",
+    "5": "hall-of-memory-frame-05.png",
+    "6": "hall-of-memory-botanical-frame-06.png"
+  },
+  "frame_consumer": "direct-transparent-source",
+  "synthetic_metal_profile_layers": false,
+  "v6_preserved": true,
+  "superseded_stellar_assets_published": false,
+  "frame_source_set": "new-chatgpt-v1-v5-plus-preserved-v6",
+  "frame_materiality": "source-master-authored"
 }
