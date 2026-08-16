@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Exploration C: luftige botanische L-Ecke mit wenigen differenzierten Blättern">
+  <g fill="none" stroke="#c39b55" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M82 458C84 363 79 270 88 191C94 139 107 105 132 87C164 64 228 70 302 72C357 73 403 70 458 77" stroke-width="2.4"/>
+    <path d="M89 224C111 213 124 197 130 177" stroke-width="1.2" opacity=".7"/>
+    <path d="M97 152C117 147 131 135 139 119" stroke-width="1.1" opacity=".68"/>
+    <path d="M178 72C190 93 206 105 228 110" stroke-width="1.15" opacity=".68"/>
+    <path d="M286 73C298 92 315 101 336 103" stroke-width="1.05" opacity=".64"/>
+  </g>
+  <g fill="#c39b55">
+    <path d="M84 302C101 287 119 287 130 297C121 316 105 323 84 302Z" opacity=".86"/>
+    <path d="M88 246C73 229 76 211 87 202C101 213 106 229 88 246Z" opacity=".7"/>
+    <path d="M111 211C120 191 138 183 152 188C149 205 135 216 111 211Z" opacity=".92"/>
+    <path d="M115 145C121 125 138 116 152 120C151 137 138 149 115 145Z" opacity=".78"/>
+    <path d="M166 73C174 53 191 45 204 51C200 68 185 78 166 73Z" opacity=".9"/>
+    <path d="M211 105C229 95 247 100 255 113C243 127 226 128 211 105Z" opacity=".7"/>
+    <path d="M294 90C309 76 326 77 337 87C329 103 314 109 294 90Z" opacity=".88"/>
+    <path d="M365 74C380 59 398 60 409 71C400 87 384 93 365 74Z" opacity=".72"/>
+    <circle cx="458" cy="77" r="3.1" opacity=".88"/>
+  </g>
+</svg>
