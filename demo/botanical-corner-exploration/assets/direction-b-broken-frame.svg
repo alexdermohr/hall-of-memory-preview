@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Exploration B: gebrochene feine Rahmung mit freiem botanischem Zeichen">
+  <g fill="none" stroke="#c39b55" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M76 458V206" stroke-width="1.4" opacity=".72"/>
+    <path d="M206 72H458" stroke-width="1.4" opacity=".72"/>
+    <path d="M83 170C104 151 123 129 137 105C148 86 164 75 187 69" stroke-width="2"/>
+    <path d="M103 149C97 131 99 115 109 101" stroke-width="1.15" opacity=".72"/>
+    <path d="M132 112C151 114 168 108 181 96" stroke-width="1.1" opacity=".68"/>
+  </g>
+  <g fill="#c39b55">
+    <path d="M93 153C83 138 86 124 96 118C106 127 109 141 93 153Z" opacity=".74"/>
+    <path d="M109 126C116 107 131 99 144 102C142 117 130 128 109 126Z"/>
+    <path d="M137 105C143 87 157 79 170 82C169 97 158 108 137 105Z" opacity=".88"/>
+    <path d="M153 101C169 100 181 106 187 116C174 124 160 121 153 101Z" opacity=".68"/>
+    <circle cx="187" cy="69" r="3"/>
+    <circle cx="75" cy="188" r="1.8" opacity=".58"/>
+    <circle cx="188" cy="72" r="1.8" opacity=".58"/>
+  </g>
+</svg>

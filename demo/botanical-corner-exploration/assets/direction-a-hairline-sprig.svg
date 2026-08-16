@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Exploration A: feine Doppellinie mit kleinem botanischem Akzent">
+  <g fill="none" stroke="#c39b55" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M74 468V84Q74 70 88 70H468" stroke-width="2.2" opacity=".9"/>
+    <path d="M86 438V98Q86 84 100 84H438" stroke-width=".9" opacity=".58"/>
+    <path d="M79 116C99 119 119 110 136 94C150 81 164 74 184 72" stroke-width="1.8"/>
+    <path d="M86 125C104 135 113 148 116 169" stroke-width="1.35" opacity=".84"/>
+  </g>
+  <g fill="#c39b55">
+    <path d="M112 105C121 87 139 81 151 85C148 100 136 111 112 105Z"/>
+    <path d="M137 88C143 70 157 62 169 65C169 79 157 90 137 88Z" opacity=".86"/>
+    <path d="M99 126C112 116 125 117 132 124C124 137 111 141 99 126Z" opacity=".82"/>
+    <path d="M114 151C126 143 138 146 143 154C134 165 123 168 114 151Z" opacity=".72"/>
+    <circle cx="184" cy="72" r="3.2" opacity=".9"/>
+  </g>
+</svg>
