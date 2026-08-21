@@ -6,7 +6,7 @@
     "T040",
     "T041"
   ],
-  "source_commit": "728ebaa60782f03f04e7c65fafb6c41b28f63155",
+  "source_commit": "32e4dbe79ddd0d97fc15fb00fc69e046811dfabd",
   "t040_implementation_commit": "01c9e305fe495e2a1713c91ce350c474537c910b",
   "base_path_commit": "cf416a8c682b4f89307e6f546ec2951bd5bbca30",
   "mobile_nav_fix_commit": "834144c114c8038dce9c8e7adc13d48ff9f14748",
@@ -17,11 +17,11 @@
   "fundus_pilot_route": "/demo/fundus-corner/",
   "github_pages_base": "/hall-of-memory-preview/",
   "indexing_policy": "noindex,nofollow",
-  "content_scope": "generated static dist only; no source, tasks, backend, credentials or node_modules",
-  "published_tree_sha256": "ff4d1a064a7916a68973536d8f23fae47a1bbef814bfddcfeb13bde4a4ae2116",
+  "content_scope": "generated static dist plus previously published static review routes; no source, tasks, backend, credentials or node_modules",
+  "published_tree_sha256": "1e58545951c6524378a1ae17b410782d4fee1f83e1329eed4d60c84ba85a9b20",
   "published_tree_hash_method": "sha256(concat(sorted(path + NUL + sha256(file-bytes).hex + LF)))",
-  "regression_gate_tree_sha256": "ff4d1a064a7916a68973536d8f23fae47a1bbef814bfddcfeb13bde4a4ae2116",
-  "generated_file_count": 35,
+  "regression_gate_tree_sha256": "cf3b84d6c5e5776dd39f2c0eeee1a51a1430b06c7bb7393ee5b880ff11a00f68",
+  "generated_file_count": 46,
   "bad_root_refs": 0,
   "customer_preview_polish": true,
   "main_demo_unselected_frame_neutral": true,
@@ -57,5 +57,58 @@
   "base_path_regression_gate": true,
   "fundus_review_state": "rejected",
   "fundus_rejection_digest": "719ddea6d0d496d1630c302dc13525ab315fd09bd4b953d87e5c43a3bca996fa",
-  "fundus_prior_acceptance_preserved": true
+  "fundus_prior_acceptance_preserved": true,
+  "source_operation": "stellar-frame-primary-v10-20260820",
+  "publication_payload_file_count": 55,
+  "frame_variant_count": 10,
+  "frame_variants": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "v7_v9_preserved": true,
+  "preserved_preview_only_paths": [
+    "demo/botanical-corner-exploration/assets/direction-a-hairline-sprig.svg",
+    "demo/botanical-corner-exploration/assets/direction-b-broken-frame.svg",
+    "demo/botanical-corner-exploration/assets/direction-c-airy-vine.svg",
+    "demo/botanical-corner-exploration/index.html",
+    "demo/fundus-corner-v2-r2/assets/context-review.webp",
+    "demo/fundus-corner-v2-r2/assets/corner-v2-r2-mask.svg",
+    "demo/fundus-corner-v2-r2/index.html"
+  ],
+  "stellar_fundus_variant": 10,
+  "stellar_fundus_asset_id": "hall-of-memory.stellar-frame.primary",
+  "stellar_fundus_build_digest": "98bda69d02be15bec9f81c6f4e09c88dcaa1b76579115a33f19e9f5008669b8d",
+  "stellar_fundus_acceptance_digest": "9cec0d57659b7e64c8cd1fa75f6553294cc9c0163622fdb66df3d28a352ef221",
+  "stellar_fundus_package_digest": "30536b8755b540f12b2dd9bf7706db9ea68585b1bfb3834f55b7e95e4a614fee",
+  "stellar_fundus_consumer_lock_digest": "a3dc26ae4168ea9f0a2865bc66fafa7fa81afd83c80f41d3cb37a83a3e93efeb",
+  "stellar_fundus_output_sha256": "0a5e97d3f2593168929b2e8067141dd1834f2cf305d8e84ce89b8cf8ca23acef",
+  "stellar_source_image_brief_sha256": "db8702a797fff95c0380c2e8d320d9fd9dee139b57c2b653478eaf89b1bd7442",
+  "stellar_package_manifest_sha256": "3af80876223af5acd5e5fa8e4ef7b7600428616cce535e7e0029b483ebb13b35",
+  "stellar_consumer_runtime_dependency": false,
+  "stellar_visual_acceptance_state": "accepted-in-fundus",
+  "legacy_preview_star_frames": {
+    "7": {
+      "sha256": "4c710d3f13484f887a0df5fcd2674ab4d6cb12fd8c629087683ba9740fb7cd1a",
+      "provenance_state": "preview-legacy-unfundused"
+    },
+    "8": {
+      "sha256": "ffed21020a351c3c1969891392dc4744b7614844099e435fd5e85608b4f2741b",
+      "provenance_state": "preview-legacy-unfundused"
+    },
+    "9": {
+      "sha256": "bdb9e070bf4c9bf641efbd07e130af5ee8fd28ec955dcd6b764f63fb31172d28",
+      "provenance_state": "preview-legacy-unfundused"
+    }
+  },
+  "publication_updated_at": "2026-08-21T05:07:24Z",
+  "stellar_v10_wide_desktop_ratio_guard": "max-width-520px",
+  "review_fix": "preserve portrait frame ratio above the 1080px layout breakpoint"
 }
