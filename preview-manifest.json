@@ -6,7 +6,7 @@
     "T040",
     "T041"
   ],
-  "source_commit": "adc6a3259c83f69c02b76f8af2f672d3715ce893",
+  "source_commit": "32e4dbe79ddd0d97fc15fb00fc69e046811dfabd",
   "t040_implementation_commit": "01c9e305fe495e2a1713c91ce350c474537c910b",
   "base_path_commit": "cf416a8c682b4f89307e6f546ec2951bd5bbca30",
   "mobile_nav_fix_commit": "834144c114c8038dce9c8e7adc13d48ff9f14748",
@@ -18,9 +18,9 @@
   "github_pages_base": "/hall-of-memory-preview/",
   "indexing_policy": "noindex,nofollow",
   "content_scope": "generated static dist plus previously published static review routes; no source, tasks, backend, credentials or node_modules",
-  "published_tree_sha256": "9e4ca53bef785255b22e0504c8f0f4696f402a712a637bc358b6a988e4d9eead",
+  "published_tree_sha256": "1e58545951c6524378a1ae17b410782d4fee1f83e1329eed4d60c84ba85a9b20",
   "published_tree_hash_method": "sha256(concat(sorted(path + NUL + sha256(file-bytes).hex + LF)))",
-  "regression_gate_tree_sha256": "c0c36e3d67beae9bf6ccf68a04972cb706b0fb1448fb0a440ee7035f6b3c9201",
+  "regression_gate_tree_sha256": "cf3b84d6c5e5776dd39f2c0eeee1a51a1430b06c7bb7393ee5b880ff11a00f68",
   "generated_file_count": 46,
   "bad_root_refs": 0,
   "customer_preview_polish": true,
@@ -108,5 +108,7 @@
       "provenance_state": "preview-legacy-unfundused"
     }
   },
-  "publication_updated_at": "2026-08-20T18:52:28Z"
+  "publication_updated_at": "2026-08-21T05:07:24Z",
+  "stellar_v10_wide_desktop_ratio_guard": "max-width-520px",
+  "review_fix": "preserve portrait frame ratio above the 1080px layout breakpoint"
 }
